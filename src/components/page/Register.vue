@@ -4,14 +4,14 @@
             <div class="ms-title">用户注册</div>
             <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                 <el-form-item prop="username">
-                    <el-input v-model="param.username" placeholder="username">
+                    <el-input v-model="param.username" placeholder="请输入">
                         <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input
                         type="password"
-                        placeholder="password"
+                        placeholder="请输入"
                         v-model="param.password"
                         @keyup.enter.native="submitForm()"
                     >
@@ -21,7 +21,7 @@
                 <el-form-item prop="passwordConfirm">
                     <el-input
                         type="password"
-                        placeholder="confirm password"
+                        placeholder="确认密码"
                         v-model="param.passwordConfirm"
                         @keyup.enter.native="submitForm()"
                     >
