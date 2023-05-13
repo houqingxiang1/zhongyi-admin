@@ -1,74 +1,52 @@
 <template>
     <div>
-        <el-row :gutter="20">
-            <el-col :span="8">
-                
-            </el-col>
-            <el-col :span="24">
-                <el-row :gutter="20" class="mgb20">
-                    
-                    <el-col :span="6">
-                        <el-card shadow="hover" :body-style="{padding: '0px'}">
-                            <div class="grid-content grid-con-1">
-                                <i class="el-icon-s-data grid-con-icon"></i>
-                                <div class="grid-cont-right">
-                                    <div class="grid-num">{{ dashboardData.questionTotal }}</div>
-                                    <div>题库数量</div>
-                                </div>
-                            </div>
-                        </el-card>
-                    </el-col>
-                    <!-- <el-col :span="6">
-                        <el-card shadow="hover" :body-style="{padding: '0px'}">
-                            <div class="grid-content grid-con-3">
-                                <i class="el-icon-aim grid-con-icon"></i>
-                                <div class="grid-cont-right">
-                                    <div class="grid-num">{{ dashboardData.symptomTotal }}</div>
-                                    <div>症候</div>
-                                </div>
-                            </div>
-                        </el-card>
-                    </el-col> -->
-                    <el-col :span="6">
-                        <el-card shadow="hover" :body-style="{padding: '0px'}">
-                            <div class="grid-content grid-con-2">
-                                <i class="el-icon-user grid-con-icon"></i>
-                                <div class="grid-cont-right">
-                                    <div class="grid-num">{{ dashboardData.bodyTotal }}</div>
-                                    <div>体质</div>
-                                </div>
-                            </div>
-                        </el-card>
-                    </el-col>
-                   
-                    
-                    <el-col :span="6">
-                        <el-card shadow="hover" :body-style="{padding: '0px'}">
-                            <div class="grid-content grid-con-4">
-                                <i class="el-icon-food grid-con-icon"></i>
-                                <div class="grid-cont-right">
-                                    <div class="grid-num">{{ dashboardData.treatmentTotal }}</div>
-                                    <div>方剂</div>
-                                </div>
-                            </div>
-                        </el-card>
-                    </el-col>
-                </el-row>
-               
-            </el-col>
-        </el-row>
-        <el-row :gutter="20">
-            <!-- <el-col :span="12">
-                <el-card shadow="hover">
-                    <schart ref="bar" class="schart" canvasId="bar" :options="options"></schart>
-                </el-card>
-            </el-col> -->
-            <!-- <el-col :span="12">
-                <el-card shadow="hover">
-                    <schart ref="line" class="schart" canvasId="line" :options="options2"></schart>
-                </el-card>
-            </el-col> -->
-        </el-row>
+        <div class="wrap">
+            <div class="right-item">
+                <div class="item-info">
+                    <span>题库数量</span> <span class="number">{{ dashboardData.questionTotal }}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>体质数量</span> <span class="number">{{ dashboardData. bodyTotal}}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>方剂数量</span> <span class="number">{{ dashboardData.treatmentTotal }}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>经络数据</span> <span class="number">{{ dashboardData.jingluo }}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>穴位数据</span> <span class="number">{{ dashboardData.xuewei }}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>临证数据</span> <span class="number">{{ dashboardData.reference }}</span>
+                </div>
+            </div>
+            <div class="right-item">
+                <div class="item-info">
+                    <span>药膳数据</span> <span class="number">{{ dashboardData.food }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- questionTotal,
+            bodyTotal,
+            symptomTotal,
+            treatmentTotal,
+            jingluo,
+            xuewei,
+            reference,
+            treatment,
+            food -->
+        
     </div>
 </template>
 
@@ -219,5 +197,33 @@ export default {
 .schart {
     width: 100%;
     height: 300px;
+}
+.right-item{
+    display: flex;
+    padding: 36px 20px;
+    align-items: center;
+    /* width: 200px; */
+    height: 80px;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px 0 hsl(215deg 9% 63% / 20%);
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.number{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d8cf0;
+}
+.item-info{
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
 }
 </style>

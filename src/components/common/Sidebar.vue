@@ -71,21 +71,25 @@ export default {
                         index: 'question-data',
                         title: '题库数据'
                     },
-                    {
-                        icon: 'el-icon-aim',
-                        index: 'reference-data',
-                        title: '临证数据'
-                    },
+                    
                     {
                         icon: 'el-icon-user',
                         index: 'tizhi-data',
                         title: '体质数据'
-                    }]
+                    },{
+                            index: 'tiku',
+                            title: '题库数据管理'
+                        },
+                        
+                        {
+                            index: 'tizhi',
+                            title: '体质数据管理'
+                        },]
                 },
                 {
                     icon: 'el-icon-bangzhu',
                     index: '2',
-                    title: '自学中医',
+                    title: '健康养生数据管理',
                     subs:[{
                         icon: 'el-icon-food',
                         index: 'treatment-category-data',
@@ -110,12 +114,16 @@ export default {
                         icon: 'el-icon-food',
                         index: 'food-data',
                         title: '药膳数据'
-                    },]
+                    },{
+                        icon: 'el-icon-aim',
+                        index: 'reference-data',
+                        title: '临证数据'
+                    }]
                 },
                 {
                     icon: 'el-icon-s-management',
                     index: '3',
-                    title: '数据管理',
+                    title: '数据添加',
                     subs: [
                         {
                             index: 'tiku',
