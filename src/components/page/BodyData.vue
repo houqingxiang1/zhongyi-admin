@@ -47,11 +47,13 @@
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <el-button
+                            :disabled="username !== 'admin'"
                             type="text"
                             icon="el-icon-edit"
                             @click="handleEdit(scope.$index, scope.row)"
                         >编辑</el-button>
                         <el-button
+                            :disabled="username !== 'admin'"
                             type="text"
                             icon="el-icon-delete"
                             class="red"
@@ -113,6 +115,12 @@ export default {
     },
     created() {
         this.handleSearch();
+    },
+    computed: {
+        username() {
+            let username = localStorage.getItem('ms_username');
+            return username ? username : this.name;
+        }
     },
     methods: {
         async getData() {
