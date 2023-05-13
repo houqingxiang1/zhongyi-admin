@@ -125,15 +125,15 @@ export default {
                     index: '3',
                     title: '数据添加',
                     subs: [
-                        {
-                            index: 'tiku',
-                            title: '题库'
-                        },
+                        // {
+                        //     index: 'tiku',
+                        //     title: '题库'
+                        // },
                         
-                        {
-                            index: 'tizhi',
-                            title: '体质'
-                        },
+                        // {
+                        //     index: 'tizhi',
+                        //     title: '体质'
+                        // },
                         {
                             index: 'treatment',
                             title: '方剂'

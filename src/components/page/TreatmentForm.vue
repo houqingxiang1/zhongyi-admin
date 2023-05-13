@@ -60,7 +60,8 @@ export default {
                             title: this.form.title,
                             description: this.form.description,
                             uni_key: this.form.uni_key,
-                            category_key: this.form.category_key
+                            category_key: this.form.category_key,
+                            category_name: this.form.category_name
                         })
                         this.$message.success('添加成功');
                         
