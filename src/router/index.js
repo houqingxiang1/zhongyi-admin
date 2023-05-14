@@ -19,6 +19,11 @@ export default new Router({
                     component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Dashboard.vue'),
                     meta: { title: '系统首页' }
                 },
+                {
+                    path: '/user',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/User.vue'),
+                    meta: { title: '用户管理' }
+                },
                 
                 {
                     path: '/question-data',
@@ -105,12 +110,12 @@ export default new Router({
                 {
                     path: '/food',
                     component: () => import(/* webpackChunkName: "form" */ '../components/page/FoodForm.vue'),
-                    meta: { title: '药膳' }
+                    meta: { title: '传统药膳' }
                 },
                 {
                     path: '/food-data',
                     component: () => import(/* webpackChunkName: "form" */ '../components/page/FoodData.vue'),
-                    meta: { title: '药膳列表' }
+                    meta: { title: '传统药膳列表' }
                 },
                 
                 {

@@ -1,5 +1,18 @@
 import request from '../utils/request'
 
+export function getAccount() {
+  return request({
+    url: '/admin/account',
+    method: 'get'
+  })
+}
+export function deleteAccount(id) {
+  return request({
+    url: `/admin/account/${id}`,
+    method: 'delete',
+    
+  })
+}
 export function addTreatment(data) {
   return request({
     url: '/admin/treatment',

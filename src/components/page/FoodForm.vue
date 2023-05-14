@@ -3,9 +3,9 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-calendar"></i> 药膳
+                    <i class="el-icon-lx-calendar"></i> 传统药膳
                 </el-breadcrumb-item>
-                <el-breadcrumb-item>药膳表单</el-breadcrumb-item>
+                <el-breadcrumb-item>传统药膳表单</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">

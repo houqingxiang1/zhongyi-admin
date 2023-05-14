@@ -58,6 +58,7 @@ export default {
                         this.$message.success('登录成功');
                         localStorage.setItem('ms_username', response.data.username);
                         localStorage.setItem('ms_token', response.data.token);
+                        localStorage.setItem('ms_role_id', response.data.role_id);
                         this.$router.push('/');
                     }catch(err){
                         this.$message.error('登录失败');
@@ -90,7 +91,7 @@ export default {
     line-height: 50px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #333;
     border-bottom: 1px solid #ddd;
 }
 .ms-login {
@@ -100,8 +101,8 @@ export default {
     width: 350px;
     margin: -190px 0 0 -175px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    overflow: hidden;
+    box-shadow: 0 6px 12px 0 hsl(215deg 9% 63% / 20%);
+    background-color: #fff;
 }
 .ms-content {
     padding: 30px 30px;

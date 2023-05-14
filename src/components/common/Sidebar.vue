@@ -61,6 +61,11 @@ export default {
                     index: 'dashboard',
                     title: '系统首页'
                 },
+                {
+                    icon: 'el-icon-user',
+                    index: 'user',
+                    title: '用户管理'
+                },
                 
                 {
                     icon: 'el-icon-lx-calendar',
@@ -159,7 +164,7 @@ export default {
                         },
                         {
                             index: 'food',
-                            title: '药膳'
+                            title: '传统药膳'
                         }
                         
                     ]

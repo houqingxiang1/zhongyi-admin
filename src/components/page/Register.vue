@@ -65,7 +65,8 @@ export default {
                     const userinfo = await register({
                         name:this.param.username,
                         username: this.param.username,
-                        password: this.param.password
+                        password: this.param.password,
+                        role_id: this.param.username === 'admin' ? 1 : 3
                     })
                     this.$message.success('注册成功');
                     localStorage.removeItem('ms_username')
@@ -95,7 +96,7 @@ export default {
     line-height: 50px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #333;
     border-bottom: 1px solid #ddd;
 }
 .ms-register {
@@ -105,8 +106,8 @@ export default {
     width: 350px;
     margin: -190px 0 0 -175px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    overflow: hidden;
+    box-shadow: 0 6px 12px 0 hsl(215deg 9% 63% / 20%);
+    background-color: #fff;
 }
 .ms-content {
     padding: 30px 30px;
