@@ -107,7 +107,7 @@ export default {
                 this.$message.error('只有admin用户可以删除其他用户');
                 return
             }
-            if(this.username === 'admin'){
+            if(row.name === 'admin'){
                 this.$message.error('不能删除admin用户');
                 return
             }
