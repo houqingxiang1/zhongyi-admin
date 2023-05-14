@@ -52,7 +52,7 @@ export default {
                     try{
                         const response = await login({
                         username: this.param.username,
-                        password: this.param.username
+                        password: this.param.password
                     })
                         console.log('-----response', response.data)
                         this.$message.success('登录成功');
